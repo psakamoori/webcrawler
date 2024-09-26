@@ -53,10 +53,10 @@ def crawl_and_save(url, visited=None):
     if content is None:
         return
     content_str = BeautifulSoup(content, 'html.parser').prettify()
-    dataset_dir = "./dataset/paint"
-    dataset_dir_pdf = "./dataset/paint/pdf"
+    dataset_dir = "./dataset/"
+    #dataset_dir_pdf = "./dataset/pdf"
     # Save the main page content
-    save_as_pdf(content_str, f"i{dataset_dir_pdf}/{url.replace('https://', '').replace('/', '_')}.pdf")
+    #save_as_pdf(content_str, f"i{dataset_dir_pdf}/{url.replace('https://', '').replace('/', '_')}.pdf")
     save_as_webpage(content_str, f"{dataset_dir}/{url.replace('https://', '').replace('/', '_')}.html")
 
     links = extract_links(content, url)
