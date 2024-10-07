@@ -5,7 +5,6 @@ Script to crawl webpage from URL
 ```
 git clone https://github.com/psakamoori/webcrawler
 cd webcrawler
-mkdir dataset
 ```
 
 ## Running the script to download .html pages
